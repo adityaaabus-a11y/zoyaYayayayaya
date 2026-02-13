@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Zoya</title>
+    <style>
+        /* CSS Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f3ef; /* Off-white background from the image */
+            font-family: 'Georgia', serif; /* Gives it that classic, official text look */
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px; /* Space between elements */
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #3e3e3e;
+            margin: 0;
+        }
+
+        .loading-image {
+            width: 120px; /* Adjust this based on your actual image size */
+            height: auto;
+        }
+
+        .loading-text {
+            font-size: 1.1rem;
+            color: #555;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>For Zoya <3 </h1>
+        
+        <img src="images/heart.gif" alt="Cupid Heart" class="loading-image">
+        
+        <p class="loading-text">Loading your gift (<span id="countdown">3</span>s)</p>
+    </div>
+
+    <script>
+        /* JavaScript for the countdown and redirect */
+        let timeLeft = 3; // Starting time in seconds
+        const countdownElement = document.getElementById('countdown');
+
+        const timer = setInterval(() => {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                // This is where it will redirect when the timer hits 0
+                // Change 'page2.html' to whatever you name your next file!
+                window.location.href = "page2.html"; 
+            }
+        }, 1000); // 1000 milliseconds = 1 second
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
